@@ -14,7 +14,7 @@ describe('AppComponent', () => {
 
   it(`should have as title 'fyle-frontend-challenge'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.componentInstance as AppComponent;
     expect(app.title).toEqual('fyle-frontend-challenge');
   });
 

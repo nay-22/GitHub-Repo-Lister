@@ -1,5 +1,20 @@
-<div class="grid h-screen place-items-center">
-  <div class="font-bold text-3xl">
+<!-- {{githubUser | json}} -->
+<div class="flex justify-evenly items-center bg-violet-700">
+  <div class="font-medium text-2xl p-3 text-white">
     Fyle Internship Challenge
   </div>
+  <div class="flex">
+    <input id="username" name="username" class="pt-1 pb-1 pl-2 pr-2 h-10 rounded-l-lg" type="search" [(ngModel)]="input" placeholder="Search GitHub User">
+    <button type="submit" (click)="renderDetails()" class="bg-white rounded-r-lg"><img src="../assets/search.png" class="" alt=""></button>
+  </div>
 </div>
+
+<div *ngIf="!gitHubUsername">
+  Enter Username
+</div>
+
+<app-userdetail [user]="user"></app-userdetail>
+
+<app-paginator *ngIf="user" [pages]="user.public_repos" (pageEvent)="handlePageEvent($event)"></app-paginator>
+
+<app-reposgrid *ngIf="repos" [repos]="repos"></app-reposgrid>
