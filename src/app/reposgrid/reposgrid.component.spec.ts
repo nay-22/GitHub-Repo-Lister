@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReposgridComponent } from './reposgrid.component';
+import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
 
 describe('ReposgridComponent', () => {
   let component: ReposgridComponent;
@@ -8,7 +9,11 @@ describe('ReposgridComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ReposgridComponent]
+      declarations: [ReposgridComponent],
+      imports: [MatGridListModule]
+      // providers: [
+      //   {provide: MatGridList, useClass: MatGridListStub}
+      // ]
     });
     fixture = TestBed.createComponent(ReposgridComponent);
     component = fixture.componentInstance;
@@ -19,3 +24,5 @@ describe('ReposgridComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+// class MatGridListStub {}

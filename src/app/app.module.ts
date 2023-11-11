@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -7,7 +7,6 @@ import { UserdetailComponent } from './userdetail/userdetail.component';
 import { PaginatorComponent } from './paginator/paginator.component';
 import { ApiService } from './services/api.service';
 import {MatPaginatorModule} from '@angular/material/paginator';
-// import { TopicsComponent } from './topics/topics.component';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -74,6 +73,7 @@ const ngxUiLoaderConfig : NgxUiLoaderConfig = {
     NgxUiLoaderHttpModule.forRoot({showForeground: true})
   ],
   providers: [ApiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

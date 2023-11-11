@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserdetailComponent } from './userdetail.component';
+import { User } from '../user';
+import { testUser } from '../test';
 
 describe('UserdetailComponent', () => {
   let component: UserdetailComponent;
@@ -18,4 +20,11 @@ describe('UserdetailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be accept type "User" from parent componenet', () => {
+    component.user = testUser;
+    fixture.detectChanges();
+
+    expect(component.user).toEqual(testUser);
+  })
 });

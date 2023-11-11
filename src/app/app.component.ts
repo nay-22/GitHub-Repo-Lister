@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from './services/api.service';
-import { Observable, Subscriber } from 'rxjs';
 import { User } from './user';
 import { Repo } from './repo';
 import { PageEvent } from '@angular/material/paginator';
+import { NONE_TYPE } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ import { PageEvent } from '@angular/material/paginator';
 })
 export class AppComponent implements OnInit {
 
-  title = 'fyle-frontend-challenge';
+  title: string = 'fyle-frontend-challenge';
 
   input!: string;
   gitHubUsername: string = '';
@@ -22,6 +22,11 @@ export class AppComponent implements OnInit {
   }
 
   renderDetails() {
+    // if (this.input === '') {
+    //   this.input = '';
+    //   this.gitHubUsername = '';
+    //   return;
+    // }
     this.getUser(this.input);
     this.gitHubUsername = this.input;
   }
