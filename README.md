@@ -49,8 +49,6 @@ Start the server
 
 ## Running Tests
 
-To run tests, run the following command
-
 **Unit Tests For 1 Component and 1 Service with 100% code coverage**
 * *Component*: **UserDetailComponent** - should accept type **User** from its parent component
 * *Service*: **ApiService** - 
