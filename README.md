@@ -52,8 +52,8 @@ Start the server
 **Unit Tests For 1 Component and 1 Service with 100% code coverage**
 * *Component*: **UserDetailComponent** - should accept type **User** from its parent component
 * *Service*: **ApiService** - 
+    * should return an Observable<User>
     * should return an **Observable<Repo[]>**
-    * should return an **Observable<User>**
 
 To run tests
 ```bash
