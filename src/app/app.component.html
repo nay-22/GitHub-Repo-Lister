@@ -13,6 +13,8 @@
   Enter Username
 </div>
 
+<ngx-ui-loader></ngx-ui-loader>
+
 <app-userdetail [user]="user"></app-userdetail>
 
 <app-paginator *ngIf="user" [pages]="user.public_repos" (pageEvent)="handlePageEvent($event)"></app-paginator>
