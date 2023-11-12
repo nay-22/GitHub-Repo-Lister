@@ -1,6 +1,7 @@
 
 # GitHub Repo Lister
 List all repositories of a GitHub user
+![App Screenshot](https://repo-lister.s3.ap-south-1.amazonaws.com/angular+page.jpeg)
 
 ## Links
 [![App Link](https://img.shields.io/badge/Link-000?style=for-the-badge&logo=ko-fi&logoColor=white)](http://repo-lister.s3-website.ap-south-1.amazonaws.com/)
@@ -8,9 +9,12 @@ List all repositories of a GitHub user
 
 ## Tech Stack
 
-**Client:** Angular, TailwindCSS
+* **Frontend:** Angular, Typescript, TailwindCSS
 
-**Server:** GitHub REST API
+* **Backend:** GitHub REST API
+
+* **Libraries:** Angular Material, ngx-ui-loader
+
 
 
 ## Run Locally
@@ -59,5 +63,10 @@ To run tests
 ```bash
   ng test
 ```
+![App Screenshot](https://repo-lister.s3.ap-south-1.amazonaws.com/angular+test.jpeg)
+
+## Deployment
+
+App deployed on static-hosting-enabled Amazon S3 bucket
 
 
